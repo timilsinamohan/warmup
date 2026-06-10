@@ -1,0 +1,6 @@
+attendee_id,event_id,name,email
+101,1,John Doe,JOHN@EMAIL.COM
+102,1,Jane Smith,jane@email.com
+103,2,Bob Jones,bob@email.com
+104,3,Alice Brown,
+105,99,Unknown Person,unknown@email.com
