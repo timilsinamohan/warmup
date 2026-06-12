@@ -2,7 +2,20 @@ import pandas as pd
 import json
 from dataclasses import dataclass
 from datetime import datetime
+import sqlite3
 
+def load_events_from_db(db_path):
+    conn = sqlite3.connect(db_path)
+
+    query = """
+    SELECT id, name, date
+    FROM events
+    """
+
+    df = pd.read_sql_query(query, conn)
+
+    conn.close()
+    return df
 
 @dataclass
 class CleanLogData:
